@@ -5,11 +5,11 @@ export enum Network {
 }
 
 export enum WalletType {
-  SECRETKEY = 'secretkey',
+  SECRETKEY = 'privateKey',
   ALBEDO = 'albedo',
   FREIGHTER = 'freighter',
   RABET = 'rabet',
-  WALLET_CONNECT = 'walletconnect',
+  WALLET_CONNECT = 'walletConnect',
   XBULL = 'xbull',
 }
 
