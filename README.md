@@ -10,11 +10,11 @@ Install package with:
         
 Import methods into your code such as:
 
-        import { connectWallet } from 'simple-stellar-signer-api'
+        import { connectWallet, Network } from 'simple-stellar-signer-api'
         
         const handleConnect = async () => {
             try {
-                const { publicKey, wallet } = await connectWallet("futurenet");
+                const { publicKey, wallet } = await connectWallet(Network.FUTURENET);
                 //Do something with results...
             } catch (err: unknown){
                 console.error(err);
@@ -23,18 +23,24 @@ Import methods into your code such as:
 
 ## Methods
 ---
+All methods handle window popup, message and event handling then returns either a resolve with message data on success or reject with a string message on error.
+
 `connectWallet`
 - Params: 
-    - network: [Network](#network) 
+    - network: [Network](#network)
+    - **(Optional)** wallets: [WalletType[]](#wallettype)
 - Returns:
-   - wallet: { publicKey: string, wallet: WalletType }
+   - wallet: { publicKey: string, wallet: [WalletType](#wallettype) }
 
 `signTransaction`
 - Params:
     - transactionXDR: string
     - network: [Network](#network)
+    - **(Optional)** extraConfig: { description?: string, operationGroups?: string } 
 - Returns:
     - signedXDR: string
+    
+## Exported Enums
 ### Network
 ---
 `pubnet`
@@ -46,6 +52,7 @@ Import methods into your code such as:
 `albedo`
 `freighter`
 `rabet`
-`secretkey`
-`walletconnect`
+`privateKey`
+`walletConnect`
 `xbull`
+
