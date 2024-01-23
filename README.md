@@ -1,9 +1,9 @@
 # Simple Stellar Signer API
----
+
 Handles [Simple Stellar Signer](https://github.com/ScaleMote/simple-stellar-signer) popup window message-based implementation and networks, exposing its methods to handle directly as **async** functions.
 
 ## How to use
----
+
 Install package with:
 
         npm i simple-stellar-signer-api
@@ -22,7 +22,7 @@ Import methods into your code such as:
         }
 
 ## Methods
----
+
 All methods handle window popup, message and event handling then returns either a resolve with message data on success or reject with a string message on error.
 
 `connectWallet`
@@ -36,7 +36,7 @@ All methods handle window popup, message and event handling then returns either 
 - Params:
     - transactionXDR: string
     - network: [Network](#network)
-    - **(Optional)** extraConfig: { description?: string, operationGroups?: string } 
+    - **(Optional)** extraConfig: { description?: string, operationGroups?: OperationGroup[] } 
 - Returns:
     - signedXDR: string
     
