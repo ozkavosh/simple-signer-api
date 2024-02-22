@@ -1,6 +1,6 @@
 {
   "name": "simple-stellar-signer-api",
-  "version": "1.0.1",
+  "version": "1.0.2b",
   "description": "Handles SimpleSigner operations and exposes its async methods",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
