@@ -7,12 +7,12 @@ import { IConnectMessage } from './types';
 /**
  * Connects a wallet of the specified network.
  *
- * @param {Network} network - The network to connect the wallet to.
+ * @param {Network | string} network - The network to connect the wallet to. Either a `Network` enum value or a custom simple signer deployment URL.
  * @param {WalletType[]} wallets - (Optional) An array of wallet types to connect to. Defaults to all SimpleSigner available wallets.
  * @return {Promise<IConnectMessage>} - A promise that resolves to an `IConnectMessage` object containing the public key and wallet information.
  */
 export const connectWallet = async (
-  network: Network,
+  network: Network | string,
   wallets?: WalletType[],
 ): Promise<IConnectMessage> => {
   try {
