@@ -11,6 +11,7 @@ export enum WalletType {
   RABET = 'rabet',
   WALLET_CONNECT = 'walletConnect',
   XBULL = 'xbull',
+  LOBSTR = 'lobstr',
 }
 
 export enum MessageEventType {
